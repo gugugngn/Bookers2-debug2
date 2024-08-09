@@ -1,0 +1,11 @@
+<div class='container p-3'>
+  <div class='row'>
+    <% if @model == 'user' %>
+      <h3>Users sarch for "<%=@content %>"</h3>
+      <%= render 'users/index', users: @records %>
+    <% elsif @model == 'book' %>
+        <h3>Books sarch for "<%=@content %>"</h3>
+        <%= render 'books/index', books: @records %>
+    <% end %>
+  </div>
+</div>
